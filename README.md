@@ -114,6 +114,20 @@ Why do you think cherry-pick changed history?
 
 1. Why do you think cherry-pick changed history? My answer: Remember, git is a directed acyclic graph. each node in the graph depends on its parent. You can't remove a node/parent in the history. Although the contents of the cherry-picked commit are the same, it has a new parent (the init commit) and that causes git to create a new commit to record that new parent.
 
+# Tip 3 How to quickly find when a bug was first introduced based on its behavior
 
+What do I mean by "based on its behavior"? If you know the offending line of code, you would use `git blame` (or annotate as it is shown in some client apps) because you want to find when that line of code was added. But... suppose you don't know what line(s) of code are to blame. Suppose you only know that the app is no longer functioning as expected.
 
+One way you could figure out when a bug was first introduced was to visit each commit and check, but that's time-consuming, literally O(n) time consuming. What do you know about a git log? And knowing that info, what type of search can you apply?
 
+This blog post is the best example of learning git bisect: https://www.metaltoad.com/blog/beginners-guide-git-bisect-process-elimination
+
+## Answers to tip 3
+
+1. What do you know about a git log? My answer: it's an ordered list of commits, so a "sorted" list. 
+
+2. And knowing that info, what type of search can you apply? Given a sorted list of items, you can apply a binary search. Fortunately git has a built in binary search, so you don't have to do it by hand!
+
+# Thank you!
+
+Thank you for your time today! I hope you were able to take a few tips and tricks back to your teams! :bow:
