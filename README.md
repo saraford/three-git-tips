@@ -2,15 +2,13 @@
 
 Members of the Electron team at GitHub wrote an outstanding git visualization tool located at https://git-school.github.io/visualizing-git/ Note: there is no working directory or staging area for this visualization tool. This tool is for visualizing git commands on commits. 
 
-To setup a demo using Git via the command line, try running a bash script! This way you can easily get back to a baseline by removing the `.git` folder for that repository.
-
-:warning: Never delete a .git folder in a real-world scenario. You can always get data back from git with the right git commands. But once the .git folder is deleted, that data is gone. 
-
 ## Fast-forward merge vs Merge Commit
 
 These steps show you how to compare and contrast a Fast-forward merge and a Merge commit using the visualization tool. 
 
 #### Bash script to setup a FF merge
+
+To quickly setup a demo using Git via the command line, try running a bash script! 
 
 This script creates a new git repository, makes an initial commit, then follows git best practices by creating a branch called feature and adds three feature work items to the feature branch. 
 
