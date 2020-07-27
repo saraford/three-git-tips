@@ -86,6 +86,33 @@ If you are teaching git, you'll want to type `undo` then repeate the rebase a fe
 
 5. Can you spot all the differences from the rebase? My answer: I really want the audience to notice the new commit IDs. Rebase changes history! Understand what this means (tl;dr - only rebase your own commit IDs that have never seen the light of day via a push). Next, I demo checking out master and merging in feature and noticing a fast-forward merge instead of a merge commit. It doesn't matter which you use when you have updates to push to master. It's really about how your team wants to work and how you want your graphs to look. 
 
+# Tip 2 - Why there is no "git undo"
+
+To the visualization tool! You can use "clear" in the visualiztion tool to clear it back to initial state. Now type in the following commands as shown:
+
+![image](https://user-images.githubusercontent.com/11529908/88505275-e9509e80-cf8b-11ea-90c4-450ff2986872.png)
+
+Suppose it's November 1, and you're ready to "undo" the halloween theme. What are 2 ways that you could "undo" the halloween theme? 
+
+## Undo by just undoing that 1 commit
+
+Forget about git or source control for a second. How would you do it by hand? You'd figure out all the code that was changed / added in halloween theme. then you'd remove those changes. But that takes time and introduces human error. Let's let git do it for us!
+
+In the tool, run `git revert <commit ID of halloween theme>` - Notice how git did the work for you! This is a classic example of why you want to keep your commit IDs small. 
+
+## Undo by removing the commit itself and all other commits afterwards
+
+Type "undo" to go back to the previous state. 
+
+Now suppose you want to have your history look as if the halloween theme commit never happened. Type `git reset e137` to point master back to the initial commit. There's another git command called "cherry-pick" that let's you pick specific commit IDs. 
+
+![image](https://user-images.githubusercontent.com/11529908/88505669-f752ef00-cf8c-11ea-966d-29ad2f3a304e.png)
+
+Why do you think cherry-pick changed history? 
+
+## Answers to tip 2
+
+1. Why do you think cherry-pick changed history? My answer: Remember, git is a directed acyclic graph. each node in the graph depends on its parent. You can't remove a node/parent in the history. Although the contents of the cherry-picked commit are the same, it has a new parent (the init commit) and that causes git to create a new commit to record that new parent.
 
 
 
