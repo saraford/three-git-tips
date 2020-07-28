@@ -7,7 +7,7 @@ Today's talk will cover the following:
 1. Find when a bug first started occurring in a repo without ever looking at code
 
 
-# Tip 1 - How to demystifying git commands using the best visualization tool ever
+# Tip 1 - How to demystifying git commands 
 
 Members of the Electron team at GitHub wrote an outstanding git visualization tool located at https://git-school.github.io/visualizing-git/ Note: there is no working directory or staging area for this visualization tool. This tool is for visualizing git commands on commits. 
 
@@ -121,7 +121,7 @@ Why do you think cherry-pick changed history?
 
 1. Why do you think cherry-pick changed history? My answer: Remember, git is a directed acyclic graph. each node in the graph depends on its parent. You can't remove a node/parent in the history. Although the contents of the cherry-picked commit are the same, it has a new parent (the init commit) and that causes git to create a new commit to record that new parent.
 
-# Tip 3 How to quickly find when a bug was first introduced based on its behavior
+# Tip 3 - How to find when a bug first started occurring
 
 What do I mean by "based on its behavior"? If you know the offending line of code, you would use `git blame` (or annotate as it is shown in some client apps) because you want to find when that line of code was added. But... suppose you don't know what line(s) of code are to blame. Suppose you only know that the app is no longer functioning as expected.
 
