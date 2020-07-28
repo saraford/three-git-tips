@@ -1,4 +1,13 @@
-# Tip 1 - How to visually learn and visually teach git 
+# Overview
+
+Today's talk will cover the following:
+
+1. How to demystifying git commands using the best visualization tool ever
+1. Why there is no "git undo"
+1. Find when a bug first started occurring in a repo without ever looking at code
+
+
+# Tip 1 - How to demystifying git commands using the best visualization tool ever
 
 Members of the Electron team at GitHub wrote an outstanding git visualization tool located at https://git-school.github.io/visualizing-git/ Note: there is no working directory or staging area for this visualization tool. This tool is for visualizing git commands on commits. 
 
