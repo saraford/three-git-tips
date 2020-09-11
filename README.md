@@ -6,6 +6,8 @@ Today's talk will cover the following:
 1. Why there is no "git undo"
 1. Find when a bug first started occurring in a repo without ever looking at code
 
+For common commands used in this talk, see bottom of readme 
+
 
 # Tip 1 - How to demystifying git commands 
 
@@ -134,6 +136,22 @@ This blog post is the best example of learning git bisect: https://www.metaltoad
 1. What do you know about a git log? My answer: it's an ordered list of commits, so a "sorted" list. 
 
 2. And knowing that info, what type of search can you apply? Given a sorted list of items, you can apply a binary search. Fortunately git has a built in binary search, so you don't have to do it by hand!
+
+# Common git commands
+
+- `git merge <branchname into current branch>` my personal cheatsheet for remembering to merge INTO current branch
+- `git rebase <onto-branchname>` my personal cheatsheet for remembering to checkout feature first to rebase ONTO master
+- `git reflog` to view your history of all git commands you've run in your local repo (reference log)
+- `git reset --hard <commitID>` can be used to roll back certain commands, like undo'ing a rebase or a merge
+- `git branch <branchname>` then `git checkout <branchname>` is the long way of doing `git checkout -b <branchname>`
+- `git checkout <commitID>` for a detached HEAD to view the repository at a specific point in time
+- `git checkout <branchname>` to get out of a detached HEAD state by returning to a branch
+- `touch <filename>` creates a 0-byte file on unix
+- `echo "hello world" > helloworld.txt` creates a file called helloworld.txt with contents hello world
+- `git revert <commitID>` the human equivalent of manually "undoing" the changes in a specific commit
+- `git log --oneline --graph --decorate` to show history in a graphical form in the terminal
+- `git rebase --interactive <onto-branchname>` to start an interactive rebase
+- `git commit -m "shorter message" -m "longer message"` as seen in the GitHub UI
 
 # Thank you!
 
